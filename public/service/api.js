@@ -43,6 +43,10 @@ class Api {
   async getCategories() {
     return await this._get('categories');
   }
+
+  async getProducts(categoryId) {
+    return await this._get(`categories/${categoryId}/products`);
+  }
 }
 
 export default new Api();
